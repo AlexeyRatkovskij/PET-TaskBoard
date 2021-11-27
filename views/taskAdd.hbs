@@ -1,0 +1,22 @@
+<h1>Добавить новую задачу</h1>
+
+<form action="/taskAdd" method="POST">
+  <div class="input-field">
+    <input id="title" name="title" type="text" class="validate" required>
+    <label for="title">Задача</label>
+    <span class="helper-text" data-error="Введите название"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="description" name="description" type="text" class="validate">
+    <label for="description">Описание</label>
+    <span class="helper-text" data-error="Введите описание"></span>
+  </div>
+
+  <div class="input-field">
+    <p>Выберите цвет задачи: </p>
+    <input id="color" name="color" type="color" class="validate">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Добавить задачу</button>
+</form>

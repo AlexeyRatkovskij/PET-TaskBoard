@@ -1,0 +1,52 @@
+<div class="topBar">
+	<div class="titleBar">
+		<a href="/" class="title">TaskBoard</a>
+		<div class="nav-items">
+			{{#if isAuth}}
+				<a href="/"><img type="button" src="../img/home.svg" class="icon" alt="Домой" title="Домой"></a>
+				<img type="button" src="../img/add.svg" class="icon" id="popup-btn-start" alt="Добавить задачу" title="Добавить задачу">
+			{{/if}}
+			{{#if username}}
+				<p type="button" class="nickname" id="user-profile">{{ username }}</p>
+			{{else}}
+				<img type="button" src="../img/option.svg" class="icon" id="user-profile" alt="">
+			{{/if}}
+			<div class="drop-navbar" style="display:none;">
+				{{#if isAuth}}
+				<a class="drop-element-parent" href="/auth/logout">
+					<div class="drop-element">
+						<div class="drop-image">
+							<img src="../img/user.svg" alt="Выход">
+						</div>
+						<div class="drop-text">
+							Выход
+						</div>
+					</div>
+				</a>
+				{{else}}
+				<a class="drop-element-parent" href="/auth/register">
+					<div class="drop-element">
+						<div class="drop-image">
+							<img src="../img/user.svg" alt="Регистрация">
+						</div>
+						<div class="drop-text">
+							Регистрация
+						</div>
+					</div>
+				</a>
+				<hr class="hr_line">
+				<a class="drop-element-parent" href="/auth/login">
+					<div class="drop-element">
+						<div class="drop-image">
+							<img src="../img/user.svg" alt="Авторизация">
+						</div>
+						<div class="drop-text">
+							Авторизация
+						</div>
+					</div>
+				</a>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</div>

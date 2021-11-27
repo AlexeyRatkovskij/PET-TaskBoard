@@ -1,0 +1,85 @@
+<!--                -->
+<div class="app">
+ <div class="content">
+   <div class="task-bar">
+     <div class="row-header">
+       <div class="col-header" title="Задача"><img type="button" src="img/status/task.png" class="iconTask" alt="Задача" ></div>
+       <div class="col-header" title="В процессе"><img type="button" src="img/status/wait.png" class="iconTask" alt="В процессе"></div>
+       <div class="col-header" title="Завершено"><img type="button" src="img/status/complete.png" class="iconTask" alt="Завершено"></div>
+     </div>
+
+     <div class="row">
+       <div class="placeholder" id="1"></div>
+       <div class="placeholder" id="2"></div>
+       <div class="placeholder" id="3"></div>
+     </div>
+   </div>
+ </div>
+</div>
+
+
+<!--    POPUP            -->
+
+
+<div class="popup-create"  style="display: none;">
+  <form method="POST" class="form-create-task">
+          <div class="clash-card__unit-name">
+            <p class="popup-task-title">Добавить новую задачу</p>
+          </div>
+          <label for="title">Название задачи</label>
+          <div class="clash-card__unit-description">
+            <div class="input-field">
+              <input id="title" placeholder="Введите название" name="title" type="text" class="validate" maxlength="30" required>
+            </div>
+          </div>
+          <label for="description">Описание</label>
+          <div class="clash-card__unit-description">
+            <div class="input-field">
+              <textarea id="description" name="description" type="text" maxlength="255"></textarea>
+              <span class="helper-text" data-error="Введите описание"></span>
+            </div>
+          </div>
+          <div class="popup_row">
+            <input id="color" name="color" type="color" class="validate">
+            <button type="submit" class="btn-submit"></button>
+          </div>
+  </form>
+</div>
+
+<div class="popup" style="display: none;">
+  <form method="POST" class="form-create-task" action="/update">
+          <div class="clash-card__unit-name">
+            <p class="popup-task-title">Редактировать задачу</p>
+          </div>
+          <label for="title">Название задачи</label>
+          <div class="clash-card__unit-description">
+            <div class="input-field">
+              <input id="title" placeholder="Введите название" name="title" type="text" class="validate" maxlength="30" required>
+            </div>
+              <input class="idTask" name="id" type="hidden">
+          </div>
+          <label for="description">Описание</label>
+          <div class="clash-card__unit-description">
+            <div class="input-field">
+              <textarea id="description" name="description" type="text" maxlength="255"></textarea>
+              <span class="helper-text" data-error="Введите описание"></span>
+            </div>
+          </div>
+          <div class="popup_row">
+            <input id="color" name="color" type="color" class="validate">
+            <button type="submit" class="btn-submit"></button>
+          </div>
+  </form>
+</div>
+
+<div class="popup-show"  style="display: none;">
+  <div class="clash-card barbarian">
+      <div class="clash-card__image"></div>
+      <div class="clash-card__unit-name">
+        <p class="popup-task-title"></p>
+      </div>
+      <div class="clash-card__unit-description">
+        <p class="popup-task-text"></p>
+      </div>
+  </div>
+</div>

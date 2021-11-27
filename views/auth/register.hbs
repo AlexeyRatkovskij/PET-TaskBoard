@@ -1,0 +1,32 @@
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form action="/auth/register" method="POST" class="login100-form validate-form">
+					<div class="helptxt"><span class="txt1">Максимальное количество символов: 20</span></div>
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="login" placeholder="Логин" maxlength="20" required>
+					</div>
+					<div class="helptxt"><span class="txt1">Максимальное количество символов: 20</span></div>
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="password" placeholder="Пароль" maxlength="20" required>
+					</div>
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+							     Регистрация
+							</button>
+						</div>
+					</div>
+					<div class="text-center p-t-15">
+						<span class="txt1">Уже зарегистрированы?</span>
+						<a class="txt2" href="/auth/login">Авторизация</a>
+					</div>
+					{{#if error}}
+						<p class="txt1 alert">{{ error }}</p>
+					{{/if}}
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="../auth/js/main.js"></script>

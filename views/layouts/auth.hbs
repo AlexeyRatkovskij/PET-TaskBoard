@@ -1,0 +1,16 @@
+{{> headAuth }}
+<body>
+{{> navbar}}
+  <div class="container">
+    {{{ body }}}
+  </div>
+  <script>
+    const btnDown = document.querySelector('#user-profile')
+    btnDown.addEventListener('click', () => {
+        const dropNavBar = document.querySelector('.drop-navbar')
+        if (dropNavBar.style.display === "none") dropNavBar.style.display = "flex"
+        else dropNavBar.style.display = "none"
+    })
+  </script>
+</body>
+</html>
